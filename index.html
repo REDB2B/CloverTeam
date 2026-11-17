@@ -3,1028 +3,671 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clover Team — B2B Performance Marketing & Арбитраж Трафика</title>
-  <meta name="description" content="Clover Team: 3+ года в арбитраже трафика и B2B лидогенерации. Экспертный Meta Buying, юнит-экономика, AI-воронки в CRM от А до Я, быстрые лендинги и прокладки под ключ.">
-  <meta name="keywords" content="Clover Team, арбитраж трафика, Meta buying, B2B лидогенерация, CPA, юнит-экономика, HADI циклы, AI воронки, лендинги под ключ">
-  
-  <!-- OpenGraph / Telegram Preview -->
+  <title>Clover Team — FB Баинг, Воронки, Разработка и Автоматизация под ключ</title>
+  <meta name="description" content="Clover Team: профессиональный FB баинг на любые вертикали, быстрое решение трудностей, грамотные воронки в CRM, автоматизация команд, разработка лендингов, онлайн-магазинов, ботов и настройка отбива без CRM.">
+  <meta name="keywords" content="Clover Team, FB баинг, Meta buying, арбитраж трафика, воронки в CRM, автоматизация под ключ, создание лендингов, онлайн магазины, telegram боты, преленды, работа без crm">
+
+  <!-- OpenGraph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Clover Team — Экспертный B2B Трафик и Масштабирование Связок">
-  <meta property="og:description" content="3+ года опыта, глубокая аналитика, сведение юнит-экономики, AI-воронки и сильный Meta баинг. Результат в цифрах и ROI.">
+  <meta property="og:title" content="Clover Team — Трафик, Воронки и Инфраструктура под ключ">
+  <meta property="og:description" content="Заливаем любую вертикаль, быстро решаем трудности, создаем лендинги, магазины, ботов и автоматизируем процессы под ключ.">
   <meta property="og:image" content="assets/images/logo.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="assets/images/logo.jpg">
 
-  <!-- Google Fonts -->
+  <!-- Typography: Space Grotesk, Inter & JetBrains Mono for clean Swiss studio aesthetic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Background Canvas for Glowing Connected Particles -->
-  <canvas id="ambient-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:0;"></canvas>
-
-  <!-- Background Grids & Ambient Aura -->
-  <div class="bg-grid-overlay"></div>
-  <div class="ambient-glow-orbs">
-    <div class="glow-orb orange"></div>
-    <div class="glow-orb cyan"></div>
-    <div class="glow-orb green"></div>
-    <div class="glow-orb yellow"></div>
+  <!-- Background Architecture Lines -->
+  <div class="grid-lines-bg" aria-hidden="true">
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
   </div>
 
   <!-- ==========================================================================
-       HEADER & NAVIGATION
+       STUDIO HEADER
        ========================================================================== -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="#hero" class="brand-logo" aria-label="Clover Team Главная">
-        <img src="assets/images/logo.jpg" alt="Clover Team Logo" width="44" height="44">
-        <div class="brand-name">
-          <span class="brand-name-title">CLOVER</span>
-          <span class="brand-name-tag">T E A M</span>
+  <header class="studio-header">
+    <div class="container header-inner">
+      <a href="#hero" class="studio-logo" aria-label="Clover Team Studio">
+        <img src="assets/images/logo.jpg" alt="Clover Team" width="32" height="32">
+        <div class="logo-text-wrap">
+          <span class="logo-brand-name">CLOVER</span>
+          <span class="logo-brand-sub">PERFORMANCE & DEV STUDIO</span>
         </div>
       </a>
 
       <nav>
-        <ul class="nav-menu">
-          <li><a href="#about" class="nav-link">О нас</a></li>
-          <li><a href="#expertise" class="nav-link">Экспертиза</a></li>
-          <li><a href="#cases" class="nav-link">Кейсы</a></li>
-          <li><a href="#calculator" class="nav-link">Юнит-экономика</a></li>
-          <li><a href="#hadi" class="nav-link">HADI-циклы</a></li>
-          <li><a href="#telegram" class="nav-link">Экосистема</a></li>
-          <li><a href="#contact" class="nav-link">Контакты</a></li>
+        <ul class="studio-nav">
+          <li><a href="#services" class="studio-nav-link">Компетенции</a></li>
+          <li><a href="#approach" class="studio-nav-link">Подход под ключ</a></li>
+          <li><a href="#cases" class="studio-nav-link">Кейсы</a></li>
+          <li><a href="#telegram" class="studio-nav-link">Экосистема TG</a></li>
+          <li><a href="#contact" class="studio-nav-link">Контакты</a></li>
         </ul>
       </nav>
 
-      <div class="nav-actions">
-        <!-- Quick Telegram Channel Button -->
-        <a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-telegram-channel" title="Наш Telegram Канал">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+      <div class="header-actions">
+        <span class="status-pill">
+          <span class="status-dot"></span>
+          <span>ONLINE / СПРИНТ АКТИВЕН</span>
+        </span>
+
+        <a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outlined btn-studio-sm">
           <span>TG Канал</span>
         </a>
 
-        <!-- Quick Telegram Bot Button -->
-        <a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-telegram-bot" title="Наш Telegram Бот">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM4 11a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-7zM9 15h.01M15 15h.01"/></svg>
+        <a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outlined btn-studio-sm">
           <span>TG Бот</span>
         </a>
 
-        <!-- Consultation Button -->
-        <button type="button" class="btn btn-sm btn-primary open-consult-modal">
-          <span>Связаться</span>
+        <button type="button" class="btn-studio btn-studio-primary btn-studio-sm trigger-consult-modal">
+          <span>Обсудить задачу</span>
         </button>
 
-        <!-- Mobile Drawer Toggle -->
-        <button class="nav-mobile-toggle" aria-label="Открыть меню">☰</button>
+        <button class="mobile-menu-btn" aria-label="Открыть навигацию">☰</button>
       </div>
     </div>
   </header>
 
   <main>
     <!-- ==========================================================================
-         HERO SECTION
+         HERO SECTION (SWISS EDITORIAL MINIMALISM)
          ========================================================================== -->
-    <section id="hero" class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge-wrap">
-            <span class="badge-pill status-live">
-              <span class="pulse-dot"></span>
-              3+ года в арбитраже & B2B
-            </span>
-            <span class="badge-pill">Meta Buying & Multitraffic</span>
-            <span class="badge-pill">AI Воронки в CRM</span>
-          </div>
-
-          <h1 class="hero-title">
-            Генерируем трафик, который <span class="gradient-clover-text">сходится в плюс</span>
-          </h1>
-
-          <p class="hero-description">
-            Мы — <strong>Clover Team</strong>. Команда полного цикла в арбитраже трафика и B2B услугах. Строим надежные связки, рассчитываем прозрачную юнит-экономику, внедряем нейросети в CRM и масштабируем объемы без слива бюджета.
-          </p>
-
-          <div class="hero-buttons-row">
-            <button type="button" class="btn btn-primary open-consult-modal">
-              <span>Обсудить задачу</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-
-            <a href="#cases" class="btn btn-secondary">
-              <span>Смотреть кейсы</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
-            </a>
-          </div>
-
-          <!-- Telegram Direct Hub -->
-          <div class="hero-telegram-links">
-            <a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="tg-quick-card">
-              <div class="tg-icon-circle">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
-              </div>
-              <div>
-                <strong>Telegram Канал</strong>
-                <div style="font-size:0.75rem; color:var(--text-dim);">Инсайды, связки & результаты</div>
-              </div>
-            </a>
-
-            <a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="tg-quick-card">
-              <div class="tg-icon-circle bot">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM4 11a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-7zM9 15h.01M15 15h.01"/></svg>
-              </div>
-              <div>
-                <strong>Telegram Бот</strong>
-                <div style="font-size:0.75rem; color:var(--text-dim);">Быстрый бриф и расчет</div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Hero 3D Clover Visual -->
-        <div class="hero-visual">
-          <div class="hero-logo-card-wrap">
-            <div class="clover-glow-backdrop"></div>
-            
-            <div class="clover-main-card">
-              <img src="assets/images/logo.jpg" alt="Clover Team" class="hero-logo-img">
-              
-              <!-- 4 Petal Identity Pills matching User Specification -->
-              <div class="clover-color-leaves-preview">
-                <span class="leaf-indicator"><span class="leaf-dot orange"></span> Оранжевый: Баинг</span>
-                <span class="leaf-indicator"><span class="leaf-dot yellow"></span> Желтый: Экономика</span>
-                <span class="leaf-indicator"><span class="leaf-dot cyan"></span> Голубой: ИИ Воронки</span>
-                <span class="leaf-indicator"><span class="leaf-dot green"></span> Зеленый: HADI</span>
-              </div>
-            </div>
-
-            <!-- Micro Floating Stat Badges -->
-            <div class="micro-badge top-left">
-              <div class="micro-badge-icon">⚡</div>
-              <div class="micro-badge-text">
-                <span class="micro-badge-val">Meta Pro Buying</span>
-                <span class="micro-badge-lbl">Свои сетапы & клоакинг</span>
-              </div>
-            </div>
-
-            <div class="micro-badge bottom-right">
-              <div class="micro-badge-icon">🎯</div>
-              <div class="micro-badge-text">
-                <span class="micro-badge-val">ROI 240%+</span>
-                <span class="micro-badge-lbl">В целевых B2B офферах</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         LIVE STATS METRICS
-         ========================================================================== -->
-    <section class="stats-section">
+    <section id="hero" class="hero-editorial">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number" data-target="3" data-suffix="+">0</div>
-            <div class="stat-label">Года практического опыта</div>
+        <div class="hero-meta-bar">
+          <span class="mono-tag">01 // PERFORMANCE, FUNNELS & AUTOMATION</span>
+          <span class="mono-tag">3+ ГОДА ПРАКТИКИ / ЛЮБЫЕ ВЕРТИКАЛИ / ПОД КЛЮЧ</span>
+        </div>
+
+        <h1 class="hero-main-title">
+          Заливаем <span class="accent-highlight">любую вертикаль</span> в FB. Строим воронки, сайты и автоматизацию под ключ.
+        </h1>
+
+        <div class="hero-grid-statement">
+          <div>
+            <p class="hero-statement-lead">
+              Мы не просто гоним трафик. Мы закрываем весь спектр задач: от сильного Meta баинга и быстрого устранения штормов до разработки лендингов, интернет-магазинов, Telegram-ботов и умных CRM-воронок.
+            </p>
+            <p class="hero-statement-sub">
+              Берем на себя техническую сложность и помогаем клиенту на каждом шаге. Если нужно работать автономно — настроим надежный отбив и сквозной учет заявок даже без громоздкой CRM.
+            </p>
+
+            <div class="hero-action-buttons">
+              <button type="button" class="btn-studio btn-studio-primary trigger-consult-modal">
+                <span>Обсудить проект с тимлидом</span>
+                <span style="font-family:var(--font-mono);">→</span>
+              </button>
+
+              <a href="#services" class="btn-studio btn-studio-outlined">
+                <span>Смотреть компетенции</span>
+              </a>
+
+              <a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outlined">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                <span>Telegram Канал</span>
+              </a>
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="1.8" data-prefix="$" data-suffix="M+">0</div>
-            <div class="stat-label">Успешно освоенного спенда</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="150" data-suffix="K+">0</div>
-            <div class="stat-label">Квалифицированных лидов</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="340" data-suffix="+">0</div>
-            <div class="stat-label">Протестированных связок</div>
+
+          <!-- Studio Spec Box -->
+          <div class="hero-spec-box">
+            <div class="spec-row">
+              <span class="spec-label">FB Баинг</span>
+              <span class="spec-value">Любые вертикали & Быстрые решения</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Новые сорсы</span>
+              <span class="spec-value">Быстрое тестирование и внедрение</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Воронки</span>
+              <span class="spec-value">Грамотная логика в CRM от А до Я</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Разработка</span>
+              <span class="spec-value">Лендинги, E-comm, Преленды, Боты</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Архитектура</span>
+              <span class="spec-value">Работа с CRM и отбив без CRM</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Формат</span>
+              <span class="spec-value">Полный спектр услуг под ключ</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         ENDLESS TECH TICKER (MARQUEE)
+         EDITORIAL TICKER (CLEAN MARQUEE)
          ========================================================================== -->
-    <div class="marquee-container" aria-hidden="true">
-      <div class="marquee-content">
-        <span class="marquee-item"><span class="marquee-dot"></span> META ADS SPECIALISTS</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> B2B LEAD GENERATION</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> UNIT-ECONOMICS MASTERY</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> AI FUNNELS & CRM</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> CUSTOM LANDING PAGES</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> CPA & DIRECT ADVERTISERS</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> HADI CYCLE TESTING</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> HIGH ROI TRAFFIC SCALING</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> META ADS SPECIALISTS</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> B2B LEAD GENERATION</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> UNIT-ECONOMICS MASTERY</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> AI FUNNELS & CRM</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> CUSTOM LANDING PAGES</span>
-        <span class="marquee-item"><span class="marquee-dot"></span> CPA & DIRECT ADVERTISERS</span>
+    <div class="editorial-ticker-wrap" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-node">META BUYING <span class="ticker-slash">/</span> ЛЮБЫЕ ВЕРТИКАЛИ</span>
+        <span class="ticker-node">БЫСТРОЕ РЕШЕНИЕ ТРУДНОСТЕЙ <span class="ticker-slash">/</span> БЕЗ ПАУЗ</span>
+        <span class="ticker-node">ВОРОНКИ В CRM <span class="ticker-slash">/</span> ПОД КЛЮЧ</span>
+        <span class="ticker-node">АВТОМАТИЗАЦИЯ ДЛЯ КОМАНД <span class="ticker-slash">/</span> ПОД ЗАПРОС</span>
+        <span class="ticker-node">РАЗРАБОТКА ЛЕНДИНГОВ & МАГАЗИНОВ <span class="ticker-slash">/</span> E-COMMERCE</span>
+        <span class="ticker-node">TELEGRAM БОТЫ & ПРЕЛЕНДЫ <span class="ticker-slash">/</span> ВЫСОКИЙ КОНВЕРТ</span>
+        <span class="ticker-node">ОТБИВ ТРАФИКА БЕЗ CRM <span class="ticker-slash">/</span> АВТОНОМНО</span>
+        <span class="ticker-node">ПОЛНЫЙ СПЕКТР УСЛУГ <span class="ticker-slash">/</span> CLOVER TEAM</span>
+        <!-- Duplicated for seamless loop -->
+        <span class="ticker-node">META BUYING <span class="ticker-slash">/</span> ЛЮБЫЕ ВЕРТИКАЛИ</span>
+        <span class="ticker-node">БЫСТРОЕ РЕШЕНИЕ ТРУДНОСТЕЙ <span class="ticker-slash">/</span> БЕЗ ПАУЗ</span>
+        <span class="ticker-node">ВОРОНКИ В CRM <span class="ticker-slash">/</span> ПОД КЛЮЧ</span>
+        <span class="ticker-node">АВТОМАТИЗАЦИЯ ДЛЯ КОМАНД <span class="ticker-slash">/</span> ПОД ЗАПРОС</span>
+        <span class="ticker-node">РАЗРАБОТКА ЛЕНДИНГОВ & МАГАЗИНОВ <span class="ticker-slash">/</span> E-COMMERCE</span>
+        <span class="ticker-node">TELEGRAM БОТЫ & ПРЕЛЕНДЫ <span class="ticker-slash">/</span> ВЫСОКИЙ КОНВЕРТ</span>
       </div>
     </div>
 
     <!-- ==========================================================================
-         ABOUT & THE 4 PETALS PHILOSOPHY
+         SERVICES & CAPABILITIES (6 EDITORIAL PILLARS)
          ========================================================================== -->
-    <section id="about" class="section">
+    <section id="services" class="section-editorial">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Философия Clover Team</span>
-          <h2 class="section-title">4 лепестка нашего подхода к трафику</h2>
-          <p class="section-subtitle">
-            Мы не просто заливаем рекламу — мы строим управляемую систему, где каждый доллар рекламного бюджета подкреплен холодным математическим расчетом, конвертящей разработкой и адаптацией под любую вертикаль.
+        <div class="section-top-header">
+          <div>
+            <span class="section-num-tag">02 // НАШИ КОМПЕТЕНЦИИ</span>
+            <h2 class="section-heading">Что мы умеем делать на практике</h2>
+          </div>
+          <p class="section-summary">
+            Мы не рассуждаем абстрактно. Вот конкретный стек навыков и инструментов, которые команда Clover внедряет ежедневно в боевых проектах.
           </p>
         </div>
 
-        <div class="petals-grid">
-          <!-- Petal 1: Orange -->
-          <div class="petal-card card-orange">
-            <div class="petal-icon-badge">🔥</div>
-            <h3 class="petal-title">Агрессивный Баинг</h3>
-            <p class="petal-desc">
-              Сильный Meta Buying (FB & Instagram) и развитие альтернативных сорсов. Мы умеем выжимать максимум из аукциона, обходить баны, работать как со сложными CRM, так и полностью автономно без них.
-            </p>
-          </div>
-
-          <!-- Petal 2: Yellow -->
-          <div class="petal-card card-yellow">
-            <div class="petal-icon-badge">📊</div>
-            <h3 class="petal-title">Юнит-Экономика</h3>
-            <p class="petal-desc">
-              Никаких слепых тестов. Сводим P&L, CAC, LTV, ROMI и CPL еще до масштабирования. Вы всегда заранее понимаете точку безубыточности и предельную стоимость целевого лида.
-            </p>
-          </div>
-
-          <!-- Petal 3: Cyan -->
-          <div class="petal-card card-cyan">
-            <div class="petal-icon-badge">🤖</div>
-            <h3 class="petal-title">ИИ Воронки в CRM</h3>
-            <p class="petal-desc">
-              Построение воронок от А до Я: нейросети-квалификаторы, автоматический скоринг, моментальный авто-дожим в мессенджерах и интеграция с любой CRM-системой.
-            </p>
-          </div>
-
-          <!-- Petal 4: Green -->
-          <div class="petal-card card-green">
-            <div class="petal-icon-badge">⚡</div>
-            <h3 class="petal-title">HADI-Управление</h3>
-            <p class="petal-desc">
-              Команда работает по недельным циклам: Гипотеза (Hypothesis) → Действие (Action) → Данные (Data) → Выводы (Insights). Быстрый отсев неэффективного и масштабирование победителей.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         CORE EXPERTISE & SERVICES
-         ========================================================================== -->
-    <section id="expertise" class="section" style="background: rgba(10, 14, 22, 0.4);">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Компетенции команды</span>
-          <h2 class="section-title">В чем мы берем ответственность на 100%</h2>
-          <p class="section-subtitle">
-            Полный цикл арбитража и B2B лидогенерации: от подбора высокомаржинального оффера до финальной документации и построения базы знаний.
-          </p>
-        </div>
-
-        <div class="expertise-grid">
-          <!-- 1. Выбор ниши и оффера -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">🎯</div>
-              <span class="expertise-tag">Анализ рынка</span>
-            </div>
-            <h3 class="expertise-title">Выбор ниши и оффера</h3>
-            <p class="expertise-text">
-              Глубокий конкурентный срез, спай-анализ актуальных связок, оценка емкости и маржинальности. Выбираем только те офферы, где гарантирован спрос и высокий LTV.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Срез спай-сервисов и аукционов</li>
-              <li class="expertise-bullet">Оценка маржинальности и конверта</li>
-              <li class="expertise-bullet">Анализ целевой аудитории B2B</li>
-            </ul>
-          </div>
-
-          <!-- 2. Сведение экономики -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">📈</div>
-              <span class="expertise-tag">Математика</span>
-            </div>
-            <h3 class="expertise-title">Сведение Юнит-экономики</h3>
-            <p class="expertise-text">
-              Детальное моделирование воронки в цифрах. Считаем предельный CPL, конверсию прелендов, аппрув партнерок и окупаемость инвестиций (ROMI) на каждый вложенный доллар.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Расчет CAC, CPL, ROMI и LTV</li>
-              <li class="expertise-bullet">Финансовая модель до старта трафика</li>
-              <li class="expertise-bullet">Защита от кассовых разрывов</li>
-            </ul>
-          </div>
-
-          <!-- 3. Взаимодействие с клиентами (Лидген) -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">🤝</div>
-              <span class="expertise-tag">B2B Лидген</span>
-            </div>
-            <h3 class="expertise-title">Клиентский Лидген</h3>
-            <p class="expertise-text">
-              Поставляем не просто «контакты», а прогретых целевых ЛПР (лиц, принимающих решения). Интегрируем сквозную аналитику и даем прозрачный контроль качества заявок.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Квалификация лидов по регламенту</li>
-              <li class="expertise-bullet">Интеграция со сквозной аналитикой</li>
-              <li class="expertise-bullet">Стабильный объем заявок в день</li>
-            </ul>
-          </div>
-
-          <!-- 4. Взаимодействие с партнерками (CPA) -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">🌐</div>
-              <span class="expertise-tag">CPA Network</span>
-            </div>
-            <h3 class="expertise-title">Партнерки & CPA Офферы</h3>
-            <p class="expertise-text">
-              Работаем с топовыми CPA сетями и прямыми рекламодателями. Выбиваем индивидуальные капы, приватные бампы ставок и эксклюзивные условия выплат за счет объема.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Приватные ставки и бампы</li>
-              <li class="expertise-bullet">Контроль аппрува и холда</li>
-              <li class="expertise-bullet">Прямые рекламодатели по всему миру</li>
-            </ul>
-          </div>
-
-          <!-- 5. Управление командой (HADI) -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">⚡</div>
-              <span class="expertise-tag">Agile Управление</span>
-            </div>
-            <h3 class="expertise-title">HADI-Циклы & Спринты</h3>
-            <p class="expertise-text">
-              Вся работа команды разбита на короткие гипотезы: 10-20 тестов еженедельно. Это позволяет непрерывно находить новые связки до выгорания старых.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Быстрый сплит-тест гипотез</li>
-              <li class="expertise-bullet">Системная приоритизация по ICE/RICE</li>
-              <li class="expertise-bullet">Четкая отчетность по результатам</li>
-            </ul>
-          </div>
-
-          <!-- 6. Построение воронок ИИ в CRM -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">🧠</div>
-              <span class="expertise-tag">AI Автоматизация</span>
-            </div>
-            <h3 class="expertise-title">ИИ Воронки в CRM от А до Я</h3>
-            <p class="expertise-text">
-              Внедряем искусственный интеллект для обработки входящих заявок. Умные боты квалифицируют клиента, отвечают на частые вопросы и записывают на встречу за секунды.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">AI-агенты в Telegram и WhatsApp</li>
-              <li class="expertise-bullet">Автоматический скоринг по критериям</li>
-              <li class="expertise-bullet">Рост конверсии отдела продаж на 30%+</li>
-            </ul>
-          </div>
-
-          <!-- 7. Дизайн & Разработка под ключ -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">🎨</div>
-              <span class="expertise-tag">UI/UX & Код</span>
-            </div>
-            <h3 class="expertise-title">Лендинги & Прокладки</h3>
-            <p class="expertise-text">
-              Создаем высококонверсионные Landing Page и Prelanding (прокладки). Пишем цепляющие офферы, верстаем адаптивные экраны со скоростью загрузки менее 1 секунды.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Современный UI/UX под целевую ЦА</li>
-              <li class="expertise-bullet">Мобильная адаптивность 100%</li>
-              <li class="expertise-bullet">Интерактивные квизы и калькуляторы</li>
-            </ul>
-          </div>
-
-          <!-- 8. Мета Баинг & Мультисорсинг -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">🚀</div>
-              <span class="expertise-tag">Media Buying</span>
-            </div>
-            <h3 class="expertise-title">Мета Баинг & Новые Сорсы</h3>
-            <p class="expertise-text">
-              Сильная инфраструктура под Meta (Facebook / Instagram): антидетект-браузеры, прогретые аккаунты, качественные прокси и клоакинг. Развиваем Google, TikTok и In-App сорсы.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Работа со сложными и серыми нишами</li>
-              <li class="expertise-bullet">Масштабирование без просадки цены лида</li>
-              <li class="expertise-bullet">Умение работать как с CRM, так и без нее</li>
-            </ul>
-          </div>
-
-          <!-- 9. Документация & База знаний -->
-          <div class="expertise-card">
-            <div class="expertise-header">
-              <div class="expertise-icon">📑</div>
-              <span class="expertise-tag">Систематизация</span>
-            </div>
-            <h3 class="expertise-title">Документация и ТЗ</h3>
-            <p class="expertise-text">
-              Пишем исчерпывающие технические задания дизайнерам, копирайтерам и верстальщикам. Структурируем базы знаний и регламенты, чтобы каждый запуск проходил без задержек.
-            </p>
-            <ul class="expertise-bullets">
-              <li class="expertise-bullet">Детальные гайды для байеров</li>
-              <li class="expertise-bullet">ТЗ на креативы и видеоролики</li>
-              <li class="expertise-bullet">Прозрачная отчетность клиентам</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         INTERACTIVE CASES & RESULTS SLIDER
-         ========================================================================== -->
-    <section id="cases" class="section cases-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Факты и цифры</span>
-          <h2 class="section-title">Реальные результаты наших связок</h2>
-          <p class="section-subtitle">
-            Листайте кейсы, чтобы увидеть, как мы превращаем рекламный бюджет в подтвержденную прибыль в B2B и CPA вертикалях.
-          </p>
-        </div>
-
-        <div class="cases-slider-wrapper">
-          <div class="cases-slider">
-            <!-- Case 1: B2B FinTech Лизинг -->
-            <div class="case-card">
-              <div>
-                <div class="case-top-meta">
-                  <span class="case-niche-pill">B2B FinTech & Лизинг</span>
-                  <span class="case-source-pill">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.88 7.55h-2.1c-.24 0-.48.15-.48.45v1.27h2.58l-.34 2.64h-2.24V21h-2.73v-7.09H8.78V11.27h1.79V9.32c0-1.78 1.09-2.75 2.68-2.75.76 0 1.57.14 1.57.14v1.84h-.94z"/></svg>
-                    Meta Ads + CRM AI
-                  </span>
-                </div>
-                <h3 class="case-title">Генерация лидов на лизинг спецтехники для юрлиц</h3>
-                <p class="case-description">
-                  Разработали интерактивный прелендинг с калькулятором платежа и подключили AI-бота в CRM для автоматического сбора ИНН и проверки кредитоспособности до звонка менеджера.
-                </p>
+        <div class="services-editorial-grid">
+          <!-- Pillar 1: FB Баинг -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <div class="service-index">
+                <span>01 // TRAFFIC</span>
+                <span class="service-dot-accent green"></span>
               </div>
-
-              <div>
-                <div class="case-metrics-grid">
-                  <div class="metric-cell">
-                    <div class="metric-val">$12,400</div>
-                    <div class="metric-lbl">Спенд</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">$42,800</div>
-                    <div class="metric-lbl">Выручка</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val roi-highlight">+245%</div>
-                    <div class="metric-lbl">ROI</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">$18.2</div>
-                    <div class="metric-lbl">CPL (квал)</div>
-                  </div>
-                </div>
-
-                <ul class="case-features-list">
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>680 квалифицированных лидов со средним чеком сделки $45,000</span>
-                  </li>
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>AI бот снизил время первого контакта с 40 минут до 22 секунд</span>
-                  </li>
-                </ul>
-
-                <button type="button" class="btn btn-secondary btn-sm open-consult-modal" style="width:100%;">
-                  Обсудить похожую связку
-                </button>
-              </div>
+              <h3 class="service-title">Сильный FB Баинг на любые вертикали</h3>
             </div>
-
-            <!-- Case 2: B2B Услуги по сертификации & логистике -->
-            <div class="case-card">
-              <div>
-                <div class="case-top-meta">
-                  <span class="case-niche-pill" style="background:rgba(255,125,26,0.15);color:var(--clover-orange);border-color:rgba(255,125,26,0.3);">B2B Сертификация & ВЭД</span>
-                  <span class="case-source-pill">Meta (FB) + ТЗ на прокладку</span>
-                </div>
-                <h3 class="case-title">Поток заявок на сертификацию продукции и ВЭД</h3>
-                <p class="case-description">
-                  Протестировали 14 вариантов видеокреативов с экспертными разборами законов. Создали скоростную посадочную страницу с квизом под ключ.
-                </p>
-              </div>
-
-              <div>
-                <div class="case-metrics-grid">
-                  <div class="metric-cell">
-                    <div class="metric-val">$8,900</div>
-                    <div class="metric-lbl">Спенд</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">$36,500</div>
-                    <div class="metric-lbl">Выручка</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val roi-highlight">+310%</div>
-                    <div class="metric-lbl">ROI</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">$14.5</div>
-                    <div class="metric-lbl">CPL</div>
-                  </div>
-                </div>
-
-                <ul class="case-features-list">
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>Конверсия квиз-прокладки в заявку выросла с 4.1% до 11.8%</span>
-                  </li>
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>Окупаемость инвестиций достигла 310% на 3-й неделе масштабирования</span>
-                  </li>
-                </ul>
-
-                <button type="button" class="btn btn-secondary btn-sm open-consult-modal" style="width:100%;">
-                  Обсудить похожую связку
-                </button>
-              </div>
-            </div>
-
-            <!-- Case 3: CPA E-Commerce & Гаджеты (Работа без CRM) -->
-            <div class="case-card">
-              <div>
-                <div class="case-top-meta">
-                  <span class="case-niche-pill" style="background:rgba(251,191,36,0.15);color:var(--clover-yellow);border-color:rgba(251,191,36,0.3);">CPA Электронная коммерция</span>
-                  <span class="case-source-pill">Meta + Автономный сетап (Без CRM)</span>
-                </div>
-                <h3 class="case-title">Масштабирование CPA оффера без громоздких CRM</h3>
-                <p class="case-description">
-                  Задача: лить большие объемы без классической CRM на стороне заказчика. Создали автономную связку с быстрой WhitePage, прокладкой и авто-выгрузкой в Telegram-базу.
-                </p>
-              </div>
-
-              <div>
-                <div class="case-metrics-grid">
-                  <div class="metric-cell">
-                    <div class="metric-val">$24,600</div>
-                    <div class="metric-lbl">Спенд</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">$69,100</div>
-                    <div class="metric-lbl">Выручка</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val roi-highlight">+180%</div>
-                    <div class="metric-lbl">ROI</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">3,120</div>
-                    <div class="metric-lbl">Заказов</div>
-                  </div>
-                </div>
-
-                <ul class="case-features-list">
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>Аппрув в партнерской сети удержан на уровне 76%</span>
-                  </li>
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>Автоматическая фильтрация дублей и бот-трафика</span>
-                  </li>
-                </ul>
-
-                <button type="button" class="btn btn-secondary btn-sm open-consult-modal" style="width:100%;">
-                  Обсудить похожую связку
-                </button>
-              </div>
-            </div>
-
-            <!-- Case 4: IT & SaaS B2B Продукт -->
-            <div class="case-card">
-              <div>
-                <div class="case-top-meta">
-                  <span class="case-niche-pill" style="background:rgba(6,182,212,0.15);color:var(--clover-cyan);border-color:rgba(6,182,212,0.3);">B2B SaaS Платформа</span>
-                  <span class="case-source-pill">Meta + LinkedIn + Воронка</span>
-                </div>
-                <h3 class="case-title">Привлечение корпоративных клиентов на демо-версию SaaS</h3>
-                <p class="case-description">
-                  Таргетинг на CEO и финдиректоров. Свели юнит-экономику, разработали интерактивный лендинг с видеопрезентацией и автоматизировали запись на демо через бота.
-                </p>
-              </div>
-
-              <div>
-                <div class="case-metrics-grid">
-                  <div class="metric-cell">
-                    <div class="metric-val">$16,200</div>
-                    <div class="metric-lbl">Спенд</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">$51,800</div>
-                    <div class="metric-lbl">Выручка</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val roi-highlight">+220%</div>
-                    <div class="metric-lbl">ROI</div>
-                  </div>
-                  <div class="metric-cell">
-                    <div class="metric-val">$32.0</div>
-                    <div class="metric-lbl">CPL (демо)</div>
-                  </div>
-                </div>
-
-                <ul class="case-features-list">
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>506 назначенных демонстраций продукта в прямом эфире</span>
-                  </li>
-                  <li class="case-feature-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                    <span>LTV привлеченного B2B клиента превысил $3,500</span>
-                  </li>
-                </ul>
-
-                <button type="button" class="btn btn-secondary btn-sm open-consult-modal" style="width:100%;">
-                  Обсудить похожую связку
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slider Controls -->
-          <div class="slider-controls">
-            <button class="slider-btn prev" aria-label="Предыдущий кейс">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg>
-            </button>
-            <div class="slider-dots">
-              <span class="slider-dot active"></span>
-              <span class="slider-dot"></span>
-              <span class="slider-dot"></span>
-              <span class="slider-dot"></span>
-            </div>
-            <button class="slider-btn next" aria-label="Следующий кейс">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         INTERACTIVE UNIT-ECONOMICS CALCULATOR
-         ========================================================================== -->
-    <section id="calculator" class="section calc-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Интерактивный расчет</span>
-          <h2 class="section-title">Калькулятор Юнит-Экономики</h2>
-          <p class="section-subtitle">
-            Проверьте потенциал окупаемости вашего оффера или услуги. Передвигайте ползунки, чтобы увидеть прогноз по лидам, выручке и чистому ROI.
-          </p>
-        </div>
-
-        <div class="calc-box">
-          <div class="calc-grid">
-            <!-- Controls Column -->
-            <div class="calc-controls-col">
-              <!-- Budget Slider -->
-              <div class="calc-input-group">
-                <div class="calc-input-header">
-                  <label for="calc-budget" class="calc-label">Планируемый спенд / рекламный бюджет в месяц:</label>
-                  <span id="display-budget" class="calc-display-val">$10,000</span>
-                </div>
-                <input type="range" id="calc-budget" class="calc-slider-input" min="1000" max="60000" step="500" value="10000">
-              </div>
-
-              <!-- Avg Check / Payout Slider -->
-              <div class="calc-input-group">
-                <div class="calc-input-header">
-                  <label for="calc-check" class="calc-label">Средний чек сделки / выплата за целевое действие:</label>
-                  <span id="display-check" class="calc-display-val">$350</span>
-                </div>
-                <input type="range" id="calc-check" class="calc-slider-input" min="50" max="2500" step="25" value="350">
-              </div>
-
-              <!-- Conversion Rate Slider -->
-              <div class="calc-input-group">
-                <div class="calc-input-header">
-                  <label for="calc-cr" class="calc-label">Ожидаемая конверсия отдела продаж из лида в сделку:</label>
-                  <span id="display-cr" class="calc-display-val">12%</span>
-                </div>
-                <input type="range" id="calc-cr" class="calc-slider-input" min="2" max="30" step="1" value="12">
-              </div>
-
-              <div style="font-size:0.82rem; color:var(--text-dim); line-height:1.5;">
-                * Расчет построен на средних бенчмарках связок Clover Team (с учетом прогрева квизами и фильтрации нецелевого трафика через AI-воронку).
-              </div>
-            </div>
-
-            <!-- Results Card Column -->
-            <div class="calc-results-col">
-              <div class="calc-results-card">
-                <div class="calc-result-row">
-                  <span class="calc-res-lbl">Прогноз целевых лидов:</span>
-                  <span id="res-leads" class="calc-res-num">520 лидов</span>
-                </div>
-                <div class="calc-result-row">
-                  <span class="calc-res-lbl">Прогноз валовой выручки:</span>
-                  <span id="res-revenue" class="calc-res-num">$21,700</span>
-                </div>
-                <div class="calc-result-row">
-                  <span class="calc-res-lbl">Прогнозируемая чистая прибыль:</span>
-                  <span id="res-profit" class="calc-res-num highlight-profit">+$11,700</span>
-                </div>
-                <div class="calc-result-row">
-                  <span class="calc-res-lbl">Ожидаемый показатель ROI:</span>
-                  <span id="res-roi" class="calc-res-num highlight-roi">+117%</span>
-                </div>
-
-                <button type="button" class="btn btn-primary open-consult-modal" style="width:100%; margin-top:8px;">
-                  Зафиксировать расчет с Clover Team
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         HADI CYCLES PROCESS ROADMAP
-         ========================================================================== -->
-    <section id="hadi" class="section" style="background: rgba(10, 14, 22, 0.4);">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Методология работы</span>
-          <h2 class="section-title">Как устроены HADI-циклы в Clover Team</h2>
-          <p class="section-subtitle">
-            Мы не надеемся на удачу. Постоянная цикличная проверка гипотез позволяет быстро выявлять профитные связки и масштабировать их до нужных объемов.
-          </p>
-        </div>
-
-        <div class="hadi-timeline">
-          <!-- H: Hypothesis -->
-          <div class="hadi-step-card step-h">
-            <div class="hadi-step-badge">H</div>
-            <h3 class="hadi-step-title">Hypothesis (Гипотеза)</h3>
-            <p class="hadi-step-desc">
-              Формулируем гипотезу: «Если изменить оффер на квизе под узкий сегмент B2B и запустить динамические креативы в Meta, цена заявки упадет на 30%».
-            </p>
-          </div>
-
-          <!-- A: Action -->
-          <div class="hadi-step-card step-a">
-            <div class="hadi-step-badge">A</div>
-            <h3 class="hadi-step-title">Action (Действие)</h3>
-            <p class="hadi-step-desc">
-              Дизайнер собирает новую прокладку, копирайтер пишет продающие триггеры, технический специалист настраивает пиксели и воронку в CRM, байер запускает сплит-тест.
-            </p>
-          </div>
-
-          <!-- D: Data -->
-          <div class="hadi-step-card step-d">
-            <div class="hadi-step-badge">D</div>
-            <h3 class="hadi-step-title">Data (Данные)</h3>
-            <p class="hadi-step-desc">
-              Собираем сухую статистику за 48-72 часа: CTR, CPC, процент конверсии на посадочной странице, доходимость лида до звонка и реальный аппрув.
-            </p>
-          </div>
-
-          <!-- I: Insights -->
-          <div class="hadi-step-card step-i">
-            <div class="hadi-step-badge">I</div>
-            <h3 class="hadi-step-title">Insights (Инсайты & Скейл)</h3>
-            <p class="hadi-step-desc">
-              Делаем выводы. Если связка плюсует — масштабируем бюджет в 3-5 раз и защищаем от банов. Если нет — отсекаем и моментально берем следующую гипотезу.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         TELEGRAM ECOSYSTEM (CHANNEL & BOT)
-         ========================================================================== -->
-    <section id="telegram" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Прямая связь и комьюнити</span>
-          <h2 class="section-title">Экосистема Clover Team в Telegram</h2>
-          <p class="section-subtitle">
-            Подписывайтесь на наш закрытый канал с разбором рабочих связок и используйте бота для моментальной консультации и брифинга.
-          </p>
-        </div>
-
-        <div class="tg-ecosystem-grid">
-          <!-- Card 1: Telegram Channel -->
-          <div class="tg-ecosystem-card tg-card-channel">
-            <div>
-              <div class="tg-header-info">
-                <div class="tg-header-avatar">📢</div>
-                <div class="tg-title-box">
-                  <h3>Telegram Канал Clover</h3>
-                  <div class="tg-handle">@clover_team_channel</div>
-                </div>
-              </div>
-
-              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">
-                Регулярные разборы арбитражных связок, фишки Meta Buying в 2024–2026 годах, инсайды юнит-экономики и реальные цифры без купюр.
-              </p>
-
-              <ul class="tg-perks-list">
-                <li class="tg-perk">
-                  <span class="tg-perk-icon">✓</span>
-                  <span>Эксклюзивные кейсы до публикации на сайте</span>
-                </li>
-                <li class="tg-perk">
-                  <span class="tg-perk-icon">✓</span>
-                  <span>Разборы банов Meta и методы обхода штормов</span>
-                </li>
-                <li class="tg-perk">
-                  <span class="tg-perk-icon">✓</span>
-                  <span>Шаблоны ТЗ и прокладок для B2B</span>
-                </li>
-              </ul>
-            </div>
-
-            <a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="btn btn-telegram-channel" style="width:100%;">
-              <span>Подписаться на Telegram Канал</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
-            </a>
-          </div>
-
-          <!-- Card 2: Telegram Bot -->
-          <div class="tg-ecosystem-card tg-card-bot">
-            <div>
-              <div class="tg-header-info">
-                <div class="tg-header-avatar">🤖</div>
-                <div class="tg-title-box">
-                  <h3>Telegram Бот Clover</h3>
-                  <div class="tg-handle">@clover_traffic_bot</div>
-                </div>
-              </div>
-
-              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">
-                Умный ассистент команды. Поможет рассчитать юнит-экономику под ваш оффер за 2 минуты, забронировать созвон или передать проект на аудит.
-              </p>
-
-              <ul class="tg-perks-list">
-                <li class="tg-perk">
-                  <span class="tg-perk-icon">✓</span>
-                  <span>Мгновенный бриф проекта без лишней бюрократии</span>
-                </li>
-                <li class="tg-perk">
-                  <span class="tg-perk-icon">✓</span>
-                  <span>Калькулятор окупаемости прямо в Telegram</span>
-                </li>
-                <li class="tg-perk">
-                  <span class="tg-perk-icon">✓</span>
-                  <span>Прямая связь с тимлидом направления</span>
-                </li>
-              </ul>
-            </div>
-
-            <a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="btn btn-telegram-bot" style="width:100%;">
-              <span>Запустить Telegram Бота</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM4 11a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-7zM9 15h.01M15 15h.01"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         CONTACT & CONSULTATION SECTION
-         ========================================================================== -->
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <div class="contact-card">
-          <div class="contact-grid">
-            <div class="contact-info-col">
-              <span class="badge-pill status-live" style="margin-bottom:16px;">
-                <span class="pulse-dot"></span> Открыты к новым проектам
-              </span>
-              <h3>Готовы масштабировать ваш трафик?</h3>
+            <div class="service-body">
               <p>
-                Оставьте заявку или напишите напрямую в Telegram. Мы проанализируем ваш оффер, предложим стратегию юнит-экономики и сформируем прогноз по лидам и окупаемости.
+                Заливаем трафик в Facebook & Instagram в любых нишах: B2B, LeadGen, E-Commerce, CPA и сложные офферы. Быстро решаем трудности с банами, штормами аукциона и расходниками. Освоение новых источников и подходов для нас не проблема.
               </p>
+              <ul class="service-specs-list">
+                <li class="service-spec-item">Залив любых вертикалей и гео</li>
+                <li class="service-spec-item">Быстрое преодоление банов и штормов</li>
+                <li class="service-spec-item">Тестирование новых сорсов без проволочек</li>
+              </ul>
+            </div>
+          </div>
 
-              <div class="contact-benefits">
-                <div class="contact-benefit-item">
-                  <span class="contact-benefit-bullet">✓</span>
-                  <span>Ответ в течение 15 минут в рабочее время</span>
-                </div>
-                <div class="contact-benefit-item">
-                  <span class="contact-benefit-bullet">✓</span>
-                  <span>Бесплатный экспресс-аудит текущей воронки и креативов</span>
-                </div>
-                <div class="contact-benefit-item">
-                  <span class="contact-benefit-bullet">✓</span>
-                  <span>Работа по договору и соглашению о конфиденциальности (NDA)</span>
-                </div>
+          <!-- Pillar 2: Воронки в CRM -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <div class="service-index">
+                <span>02 // CONVERSION</span>
+                <span class="service-dot-accent yellow"></span>
               </div>
+              <h3 class="service-title">Грамотные воронки в CRM от А до Я</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                Продумываем сквозной путь пользователя: от клика по рекламе до закрытия сделки. Выстраиваем логику этапов, квалификацию лидов, цепочки касаний и прогрева, предотвращая потери заявок менеджерами.
+              </p>
+              <ul class="service-specs-list">
+                <li class="service-spec-item">Проектирование логики движения клиента</li>
+                <li class="service-spec-item">Автоматический скоринг и фильтрация спама</li>
+                <li class="service-spec-item">Интеграция с amoCRM, Bitrix24 и custom CRM</li>
+              </ul>
+            </div>
+          </div>
 
-              <!-- Direct Telegram Manager Contact Box -->
-              <div class="direct-tg-box">
-                <div class="direct-tg-info">
-                  <span class="direct-tg-avatar">💬</span>
-                  <div>
-                    <div class="direct-tg-txt">Тимлид Clover Team</div>
-                    <div class="direct-tg-sub">Прямая связь: @clover_team_lead</div>
-                  </div>
-                </div>
-                <button type="button" class="btn btn-sm btn-secondary" data-copy-tg="@clover_team_lead">
-                  <span>Скопировать</span>
-                </button>
+          <!-- Pillar 3: Автоматизация для команд -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <div class="service-index">
+                <span>03 // AUTOMATION</span>
+                <span class="service-dot-accent orange"></span>
               </div>
+              <h3 class="service-title">Автоматизации для команд под ключ</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                Разрабатываем кастомные решения под ваш индивидуальный запрос: автоматическое распределение лидов между сейлзами, авто-напоминания, передача данных через API, триггерные вебхуки и сквозная отчетность.
+              </p>
+              <ul class="service-specs-list">
+                <li class="service-spec-item">Автоматизация рутины под персональный запрос</li>
+                <li class="service-spec-item">Интеграции через Make, n8n, Webhooks и Python</li>
+                <li class="service-spec-item">Исключение человеческого фактора в обработке</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Разработка лендингов и магазинов -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <div class="service-index">
+                <span>04 // DEVELOPMENT</span>
+                <span class="service-dot-accent cyan"></span>
+              </div>
+              <h3 class="service-title">Лендинги, Онлайн-Магазины & Преленды</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                Создаем адаптивные и легкие посадочные страницы с конверсией выше рынка. Разрабатываем e-commerce магазины, каталоги, а также прелендинги (прокладки) с квизами для прогрева и фильтрации трафика.
+              </p>
+              <ul class="service-specs-list">
+                <li class="service-spec-item">Landing Page под ключ с быстрой загрузкой (&lt;1с)</li>
+                <li class="service-spec-item">Разработка интернет-магазинов (E-Commerce)</li>
+                <li class="service-spec-item">Прелендинги, квизы и интерактивные прогревы</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 5: Составление Telegram Ботов -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <div class="service-index">
+                <span>05 // BOTS & CHAT</span>
+                <span class="service-dot-accent green"></span>
+              </div>
+              <h3 class="service-title">Составление Ботов под любые задачи</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                Проектируем и запускаем многофункциональных ботов в Telegram. От лид-магнитов и моментального брифования клиента до полноценного интернет-магазина внутри мессенджера и связки с платежными шлюзами.
+              </p>
+              <ul class="service-specs-list">
+                <li class="service-spec-item">Боты для сбора и квалификации лидов</li>
+                <li class="service-spec-item">Автодожимы, квизы и выдача материалов</li>
+                <li class="service-spec-item">Синхронизация с базами и CRM-системами</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 6: Настройка отбива без CRM -->
+          <div class="service-box">
+            <div class="service-box-header">
+              <div class="service-index">
+                <span>06 // INFRASTRUCTURE</span>
+                <span class="service-dot-accent yellow"></span>
+              </div>
+              <h3 class="service-title">Настройка отбива и учет без CRM</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                Не у всех проектов есть необходимость или возможность разворачивать тяжелую CRM. Мы настраиваем надежный сквозной отбив трафика напрямую: в защищенные Telegram-чаты, Google Таблицы или кастомные вебхуки.
+              </p>
+              <ul class="service-specs-list">
+                <li class="service-spec-item">Учет и распределение лидов без затрат на CRM</li>
+                <li class="service-spec-item">Моментальные уведомления в Telegram менеджерам</li>
+                <li class="service-spec-item">Защита от дублей, фрода и потери контактов</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         END-TO-END APPROACH / ПОЛНЫЙ СПЕКТР УСЛУГ
+         ========================================================================== -->
+    <section id="approach" class="section-editorial">
+      <div class="container">
+        <div class="philosophy-grid">
+          <div class="philosophy-content-col">
+            <div>
+              <span class="section-num-tag">03 // ПОЛНЫЙ СПЕКТР УСЛУГ</span>
+              <h2 class="philosophy-lead-quote">
+                Помогаем клиенту настроить всё под ключ. От трафика до технической базы.
+              </h2>
+              <p class="philosophy-desc">
+                Часто клиенты сталкиваются с разрывом: таргетолог налил кликов, верстальщик собрал кривой сайт, а менеджеры потеряли заявки. Clover Team устраняет этот хаос. Мы берем на себя полную ответственность за результат:
+              </p>
             </div>
 
-            <!-- Form Column -->
-            <div class="contact-form-col">
-              <form data-handle="lead-form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label class="form-label" for="inp-name">Ваше имя / Компания:</label>
-                    <input type="text" id="inp-name" name="name" class="form-input" placeholder="Александр" required>
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="inp-tg">Ваш Telegram (@username):</label>
-                    <input type="text" id="inp-tg" name="telegram" class="form-input" placeholder="@username" required>
-                  </div>
+            <ul class="deliverables-checklist">
+              <li class="deliverable-entry">
+                <span class="deliverable-idx">01</span>
+                <div>
+                  <div class="deliverable-title">Быстрый запуск и адаптация</div>
+                  <div class="deliverable-sub">Тестируем связку, оперативно устраняем трудности с банами и выводим кампанию в плюс.</div>
                 </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label class="form-label" for="inp-niche">Ниша / Оффер:</label>
-                    <select id="inp-niche" name="niche" class="form-select">
-                      <option value="B2B Услуги & Сервисы">B2B Услуги & Сервисы</option>
-                      <option value="Лидогенерация">B2B Лидогенерация под ключ</option>
-                      <option value="CPA & Партнерский маркетинг">CPA & Партнерский маркетинг</option>
-                      <option value="FinTech & Лизинг">FinTech & Финансы</option>
-                      <option value="AI Воронки в CRM">Построение AI Воронок в CRM</option>
-                      <option value="Разработка лендингов & прокладок">Разработка лендингов & прокладок</option>
-                      <option value="Другая ниша">Другое направление</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="form-label" for="inp-budget">Бюджет в месяц ($):</label>
-                    <select id="inp-budget" name="budget" class="form-select">
-                      <option value="$1,000 - $3,000">$1,000 — $3,000</option>
-                      <option value="$3,000 - $10,000" selected>$3,000 — $10,000</option>
-                      <option value="$10,000 - $30,000">$10,000 — $30,000</option>
-                      <option value="$30,000+">$30,000+</option>
-                    </select>
-                  </div>
+              </li>
+              <li class="deliverable-entry">
+                <span class="deliverable-idx">02</span>
+                <div>
+                  <div class="deliverable-title">Упаковка под ключ</div>
+                  <div class="deliverable-sub">Дизайн и верстка лендинга, магазина или прелендинга с высокой конверсией.</div>
                 </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="inp-comment">Краткая задача / вопрос:</label>
-                  <textarea id="inp-comment" name="comment" class="form-textarea" rows="3" placeholder="Опишите текущую задачу, гео, наличие CRM или специфику..."></textarea>
+              </li>
+              <li class="deliverable-entry">
+                <span class="deliverable-idx">03</span>
+                <div>
+                  <div class="deliverable-title">Интеграция процессов</div>
+                  <div class="deliverable-sub">Настройка воронки в CRM, создание Telegram-бота либо подключение прямого отбива без CRM.</div>
                 </div>
+              </li>
+            </ul>
+          </div>
 
-                <button type="submit" class="btn btn-primary" style="width:100%;">
-                  <span>Отправить заявку</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </form>
+          <!-- Logo & Studio Card Showcase -->
+          <div class="philosophy-card-showcase">
+            <img src="assets/images/logo.jpg" alt="Clover Team Official Logo" class="showcase-logo-img">
+            <h3 style="font-size:1.4rem; margin-bottom:8px;">Clover Team</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; max-width:320px; margin-bottom:20px;">
+              3+ года практического опыта в арбитраже трафика, performance-маркетинге и инфраструктурных решениях.
+            </p>
+            <div class="showcase-logo-details">
+              <span>META BUYING</span>
+              <span>•</span>
+              <span>CRM FUNNELS</span>
+              <span>•</span>
+              <span>DEV</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <!-- Success Message Box -->
-              <div class="form-success-message">
-                <div style="font-size:2rem; margin-bottom:8px;">✅</div>
-                <h4 style="font-size:1.3rem; margin-bottom:8px; color:#ffffff;">Заявка принята!</h4>
-                <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:18px;">
-                  Мы уже анализируем информацию. Чтобы ускорить контакт, вы можете написать нам прямо сейчас в Telegram с заполненными данными:
+    <!-- ==========================================================================
+         CASES & RESULTS SLIDER
+         ========================================================================== -->
+    <section id="cases" class="section-editorial">
+      <div class="container">
+        <div class="cases-editorial-header">
+          <div>
+            <span class="section-num-tag">04 // РЕЗУЛЬТАТЫ & КЕЙСЫ</span>
+            <h2 class="section-heading" style="margin-bottom:0;">Связки, которые мы реализовали</h2>
+          </div>
+
+          <!-- Slider Arrow Controls -->
+          <div class="slider-nav-buttons">
+            <button class="nav-arrow-btn prev" aria-label="Предыдущий кейс">←</button>
+            <button class="nav-arrow-btn next" aria-label="Следующий кейс">→</button>
+          </div>
+        </div>
+
+        <div class="cases-slider-container">
+          <div class="cases-editorial-track">
+            <!-- Case 1 -->
+            <article class="case-editorial-card">
+              <div>
+                <div class="case-card-meta">
+                  <span class="case-tag-pill">B2B УСЛУГИ & ЛИДГЕН</span>
+                  <span class="case-source-txt">FB BUYING + CRM ВОРОНКА</span>
+                </div>
+                <h3 class="case-headline">Поток квалифицированных B2B лидов на сложные услуги</h3>
+                <p class="case-snippet">
+                  Собрали прелендинг с квиз-фильтрацией нецелевого трафика. Настроили грамотную воронку в CRM с автоматическим распределением заявок по регионам и автодожимом в мессенджерах.
                 </p>
-                <a href="#" class="btn btn-telegram-channel tg-direct-send-btn" target="_blank" rel="noopener noreferrer">
-                  Открыть диалог в Telegram
+              </div>
+
+              <div>
+                <div class="case-metric-board">
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">$14,200</span>
+                    <span class="metric-board-lbl">Спенд</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">$48,600</span>
+                    <span class="metric-board-lbl">Выручка</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val accent">+242%</span>
+                    <span class="metric-board-lbl">ROI</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">$18.4</span>
+                    <span class="metric-board-lbl">CPL (квал)</span>
+                  </div>
+                </div>
+
+                <div class="case-footer-action">
+                  <span style="font-size:0.85rem; color:var(--text-secondary);">640 проверенных лидов за 32 дня</span>
+                  <button type="button" class="btn-studio btn-studio-outlined btn-studio-sm trigger-consult-modal">Обсудить связку</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Case 2 -->
+            <article class="case-editorial-card">
+              <div>
+                <div class="case-card-meta">
+                  <span class="case-tag-pill">E-COMMERCE & МАГАЗИН</span>
+                  <span class="case-source-txt">META + РАБОТА БЕЗ CRM</span>
+                </div>
+                <h3 class="case-headline">Масштабирование онлайн-магазина без тяжелой CRM</h3>
+                <p class="case-snippet">
+                  Клиенту требовалось быстро протестировать партию товара. Создали быстрый лендинг магазина под ключ и настроили отбив заказов напрямую в защищенный Telegram-канал менеджеров без затрат на CRM.
+                </p>
+              </div>
+
+              <div>
+                <div class="case-metric-board">
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">$21,800</span>
+                    <span class="metric-board-lbl">Спенд</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">$63,400</span>
+                    <span class="metric-board-lbl">Выручка</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val accent">+190%</span>
+                    <span class="metric-board-lbl">ROI</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">2,840</span>
+                    <span class="metric-board-lbl">Заказов</span>
+                  </div>
+                </div>
+
+                <div class="case-footer-action">
+                  <span style="font-size:0.85rem; color:var(--text-secondary);">Скорость обработки лида: до 1 минуты</span>
+                  <button type="button" class="btn-studio btn-studio-outlined btn-studio-sm trigger-consult-modal">Обсудить связку</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Case 3 -->
+            <article class="case-editorial-card">
+              <div>
+                <div class="case-card-meta">
+                  <span class="case-tag-pill">АВТОМАТИЗАЦИЯ & БОТЫ</span>
+                  <span class="case-source-txt">FB LEADS + TELEGRAM BOT</span>
+                </div>
+                <h3 class="case-headline">Автоматизация отдела продаж для сервисной команды</h3>
+                <p class="case-snippet">
+                  Разработали Telegram-бота для первичного интервью клиентов и синхронизировали его с воронкой в CRM. Нагрузка на операторов снизилась на 65%, а конверсия из лида во встречу выросла на треть.
+                </p>
+              </div>
+
+              <div>
+                <div class="case-metric-board">
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">$9,400</span>
+                    <span class="metric-board-lbl">Спенд</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">$34,100</span>
+                    <span class="metric-board-lbl">Выручка</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val accent">+262%</span>
+                    <span class="metric-board-lbl">ROI</span>
+                  </div>
+                  <div class="metric-board-cell">
+                    <span class="metric-board-val">410</span>
+                    <span class="metric-board-lbl">Встреч</span>
+                  </div>
+                </div>
+
+                <div class="case-footer-action">
+                  <span style="font-size:0.85rem; color:var(--text-secondary);">Полный цикл автоматизации под ключ</span>
+                  <button type="button" class="btn-studio btn-studio-outlined btn-studio-sm trigger-consult-modal">Обсудить связку</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TELEGRAM ECOSYSTEM (CLEAN STUDIO BLOCKS)
+         ========================================================================== -->
+    <section id="telegram" class="section-editorial">
+      <div class="container">
+        <div class="section-top-header">
+          <div>
+            <span class="section-num-tag">05 // ЭКОСИСТЕМА В TELEGRAM</span>
+            <h2 class="section-heading">Наш Telegram Канал и Бот</h2>
+          </div>
+          <p class="section-summary">
+            Подписывайтесь на наш канал с практическими наблюдениями и используйте бота для моментальной связи и отправки ТЗ.
+          </p>
+        </div>
+
+        <div class="telegram-split-grid">
+          <!-- Channel Card -->
+          <div class="telegram-entry-box">
+            <div>
+              <div class="tg-entry-top">
+                <div class="tg-entry-icon">📢</div>
+                <span class="tg-entry-handle">@clover_team_channel</span>
+              </div>
+              <h3 class="tg-entry-title">Telegram Канал Clover</h3>
+              <p class="tg-entry-desc">
+                Практика FB баинга, обходы банов и штормов, готовые связки, логика создания конвертящих прелендов и автоматизации воронок. Без воды и инфошума.
+              </p>
+            </div>
+
+            <a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-primary" style="width:100%;">
+              <span>Перейти в Telegram Канал</span>
+              <span style="font-family:var(--font-mono);">→</span>
+            </a>
+          </div>
+
+          <!-- Bot Card -->
+          <div class="telegram-entry-box">
+            <div>
+              <div class="tg-entry-top">
+                <div class="tg-entry-icon">🤖</div>
+                <span class="tg-entry-handle">@clover_traffic_bot</span>
+              </div>
+              <h3 class="tg-entry-title">Telegram Бот Clover</h3>
+              <p class="tg-entry-desc">
+                Наш рабочий ассистент. Поможет быстро заполнить бриф вашей задачи, выбрать нужный комплекс услуг и мгновенно связаться с тимлидом направления.
+              </p>
+            </div>
+
+            <a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outlined" style="width:100%;">
+              <span>Запустить Telegram Бота</span>
+              <span style="font-family:var(--font-mono);">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT / BRIEF SECTION
+         ========================================================================== -->
+    <section id="contact" class="section-editorial">
+      <div class="container">
+        <div class="contact-editorial-grid">
+          <div>
+            <span class="section-num-tag">06 // СТАРТ РАБОТЫ</span>
+            <h2 class="section-heading" style="margin-bottom:24px;">Готовы обсудить вашу задачу?</h2>
+            <p style="color:var(--text-secondary); font-size:1.05rem; line-height:1.65; max-width:480px;">
+              Опишите вводные: вертикаль, текущие сложности, потребность в разработке сайта, ботов или воронки в CRM. Мы ответим оперативно с конкретным планом действий.
+            </p>
+
+            <div class="contact-direct-leads">
+              <div class="direct-lead-channel">
+                <div>
+                  <div class="direct-lead-name">Прямой контакт тимлида</div>
+                  <div class="direct-lead-val">@clover_team_lead</div>
+                </div>
+                <button type="button" class="btn-studio btn-studio-outlined btn-studio-sm" data-copy="@clover_team_lead">
+                  Скопировать
+                </button>
+              </div>
+
+              <div class="direct-lead-channel">
+                <div>
+                  <div class="direct-lead-name">Официальный бот для заявок</div>
+                  <div class="direct-lead-val">@clover_traffic_bot</div>
+                </div>
+                <a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="btn-studio btn-studio-outlined btn-studio-sm">
+                  Открыть
                 </a>
               </div>
+            </div>
+          </div>
+
+          <!-- Studio Form -->
+          <div class="studio-form">
+            <form data-form="brief">
+              <div class="form-field-row">
+                <div class="form-field-unit">
+                  <label class="form-field-label" for="form-name">Имя / Компания:</label>
+                  <input type="text" id="form-name" name="name" class="form-field-input" placeholder="Александр" required>
+                </div>
+                <div class="form-field-unit">
+                  <label class="form-field-label" for="form-tg">Telegram (@username):</label>
+                  <input type="text" id="form-tg" name="telegram" class="form-field-input" placeholder="@username" required>
+                </div>
+              </div>
+
+              <div class="form-field-unit">
+                <label class="form-field-label" for="form-task">Что требуется реализовать:</label>
+                <select id="form-task" name="task" class="form-field-select">
+                  <option value="FB Баинг (Любая вертикаль)">FB Баинг (Залив / Масштабирование)</option>
+                  <option value="Воронка в CRM + Автоматизация">Воронка в CRM + Автоматизация под ключ</option>
+                  <option value="Разработка лендинга или онлайн-магазина">Разработка лендинга / интернет-магазина</option>
+                  <option value="Создание Telegram Бота">Создание Telegram Бота</option>
+                  <option value="Настройка отбива без CRM">Настройка отбива трафика без CRM</option>
+                  <option value="Комплекс услуг под ключ">Полный спектр услуг под ключ</option>
+                </select>
+              </div>
+
+              <div class="form-field-unit">
+                <label class="form-field-label" for="form-budget">Ориентировочный бюджет в месяц:</label>
+                <select id="form-budget" name="budget" class="form-field-select">
+                  <option value="до $3,000">до $3,000</option>
+                  <option value="$3,000 — $10,000" selected>$3,000 — $10,000</option>
+                  <option value="$10,000 — $30,000">$10,000 — $30,000</option>
+                  <option value="Более $30,000">Более $30,000</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-studio btn-studio-primary" style="width:100%; margin-top:8px;">
+                <span>Отправить задачу в Clover Team</span>
+                <span style="font-family:var(--font-mono);">→</span>
+              </button>
+            </form>
+
+            <div class="form-alert-success">
+              <h4 style="font-size:1.15rem; margin-bottom:8px;">Заявка принята</h4>
+              <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">
+                Вы также можете перейти напрямую в диалог в Telegram с заполненным текстом задачи:
+              </p>
+              <a href="#" class="btn-studio btn-studio-primary btn-studio-sm direct-tg-link" target="_blank" rel="noopener noreferrer">
+                Написать в Telegram
+              </a>
             </div>
           </div>
         </div>
@@ -1033,116 +676,110 @@
   </main>
 
   <!-- ==========================================================================
-       ROTATING CORNER BANNER WIDGET
-       (Specially requested: "банерная реклама которая вращается по сайту")
+       ROTATING STUDIO BANNER (HOT CASES & ALERTS WIDGET)
        ========================================================================== -->
-  <aside id="rotating-banner-widget" class="rotating-banner-widget" aria-label="Горячие кейсы и обновления">
-    <div class="widget-min-trigger" title="Открыть горячий кейс">🔥</div>
+  <aside id="rotating-studio-banner" class="rotating-studio-banner" aria-label="Студийный лайв-трекер">
+    <div class="banner-expand-trigger" title="Развернуть уведомление">⚡</div>
 
-    <div class="widget-header">
-      <div class="widget-badge">
-        <span>⚡ Clover Live Alert</span>
+    <div class="banner-header-bar">
+      <div class="banner-live-indicator">
+        <span class="status-dot"></span>
+        <span>Clover Live Update</span>
       </div>
-      <div class="widget-controls">
-        <button class="widget-btn widget-btn-prev" title="Предыдущий" aria-label="Предыдущий">‹</button>
-        <button class="widget-btn widget-btn-next" title="Следующий" aria-label="Следующий">›</button>
-        <button class="widget-btn widget-btn-close" title="Свернуть" aria-label="Свернуть">✕</button>
+      <div class="banner-ctrl-btns">
+        <button class="banner-btn banner-btn-prev" aria-label="Предыдущее">‹</button>
+        <button class="banner-btn banner-btn-next" aria-label="Следующее">›</button>
+        <button class="banner-btn banner-btn-close" aria-label="Свернуть">✕</button>
       </div>
     </div>
 
-    <div class="widget-body">
+    <div class="banner-content-wrap">
       <!-- Item 1 -->
-      <div class="widget-card-item active">
-        <div class="widget-case-title">🔥 Горячий кейс: B2B FinTech Лизинг</div>
-        <p style="font-size:0.8rem; color:var(--text-muted);">Meta Ads + AI квалификация в CRM: 680 лидов</p>
-        <div class="widget-case-details">
-          <span class="widget-roi">+245% ROI</span>
-          <a href="#cases" class="widget-action-link">Смотреть кейс →</a>
+      <div class="banner-item active">
+        <div class="banner-item-title">FB Баинг: любая вертикаль</div>
+        <div class="banner-item-meta">
+          <span class="banner-item-tag">Спринт открыт</span>
+          <a href="#contact" class="banner-item-link">Начать работу →</a>
         </div>
       </div>
 
       <!-- Item 2 -->
-      <div class="widget-card-item">
-        <div class="widget-case-title">⚡ Свободно 2 слота на Meta Buying</div>
-        <p style="font-size:0.8rem; color:var(--text-muted);">Берем в работу проекты с бюджетом от $3,000</p>
-        <div class="widget-case-details">
-          <span class="widget-roi" style="color:var(--clover-yellow);">Спринт активен</span>
-          <a href="#contact" class="widget-action-link">Занять слот →</a>
+      <div class="banner-item">
+        <div class="banner-item-title">B2B Услуги: 640 лидов по $18.4</div>
+        <div class="banner-item-meta">
+          <span class="banner-item-tag">+242% ROI</span>
+          <a href="#cases" class="banner-item-link">Смотреть кейс →</a>
         </div>
       </div>
 
       <!-- Item 3 -->
-      <div class="widget-card-item">
-        <div class="widget-case-title">🤖 AI-Воронка в действии</div>
-        <p style="font-size:0.8rem; color:var(--text-muted);">+42% к дожимам лидов в Telegram без менеджеров</p>
-        <div class="widget-case-details">
-          <span class="widget-roi" style="color:var(--clover-cyan);">Связка недели</span>
-          <a href="#expertise" class="widget-action-link">Подробнее →</a>
+      <div class="banner-item">
+        <div class="banner-item-title">Отбив без CRM: ленд + TG база</div>
+        <div class="banner-item-meta">
+          <span class="banner-item-tag">2,840 заказов</span>
+          <a href="#services" class="banner-item-link">Подробнее →</a>
         </div>
       </div>
 
       <!-- Item 4 -->
-      <div class="widget-card-item">
-        <div class="widget-case-title">📈 CPA Оффер: $69,100 выручки</div>
-        <p style="font-size:0.8rem; color:var(--text-muted);">Масштабирование без CRM: 3,120 заказов</p>
-        <div class="widget-case-details">
-          <span class="widget-roi">+180% ROI</span>
-          <a href="#cases" class="widget-action-link">Смотреть кейс →</a>
+      <div class="banner-item">
+        <div class="banner-item-title">Автоматизация воронок & Боты</div>
+        <div class="banner-item-meta">
+          <span class="banner-item-tag">Под ключ</span>
+          <a href="#contact" class="banner-item-link">Оставить бриф →</a>
         </div>
       </div>
     </div>
 
-    <div class="widget-progress-line">
-      <div class="widget-progress-fill"></div>
+    <div class="banner-progress-rail">
+      <div class="banner-progress-fill"></div>
     </div>
   </aside>
 
   <!-- ==========================================================================
-       MODAL CONSULTATION POPUP
+       MODAL POPUP
        ========================================================================== -->
-  <div id="lead-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-window">
-      <button class="modal-close-btn" aria-label="Закрыть">✕</button>
+  <div id="consult-modal" class="studio-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="studio-modal-card">
+      <button class="modal-dismiss-btn" aria-label="Закрыть окно">✕</button>
 
-      <div style="text-align:center; margin-bottom:24px;">
-        <span class="badge-pill status-live" style="margin-bottom:10px;">
-          <span class="pulse-dot"></span> Clover Consultation
-        </span>
-        <h3 style="font-size:1.6rem; margin-bottom:6px;">Обсудить проект</h3>
-        <p style="color:var(--text-muted); font-size:0.9rem;">
-          Заполните форму, и мы свяжемся с вами в Telegram для расчета юнит-экономики и теста связки.
+      <div style="margin-bottom:24px;">
+        <span class="mono-tag">CLOVER TEAM // DIRECT BRIEF</span>
+        <h3 style="font-size:1.5rem; margin-top:6px; margin-bottom:8px;">Обсудить проект</h3>
+        <p style="color:var(--text-secondary); font-size:0.9rem;">
+          Оставьте контактные данные, и тимлид команды свяжется с вами в Telegram для предметного обсуждения.
         </p>
       </div>
 
-      <form data-handle="lead-form">
-        <div class="form-group">
-          <label class="form-label" for="mod-name">Ваше имя:</label>
-          <input type="text" id="mod-name" name="name" class="form-input" placeholder="Константин" required>
+      <form data-form="brief">
+        <div class="form-field-unit">
+          <label class="form-field-label" for="mod-name">Ваше имя / Компания:</label>
+          <input type="text" id="mod-name" name="name" class="form-field-input" placeholder="Константин" required>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="mod-tg">Ваш Telegram:</label>
-          <input type="text" id="mod-tg" name="telegram" class="form-input" placeholder="@telegram_username" required>
+        <div class="form-field-unit">
+          <label class="form-field-label" for="mod-tg">Ваш Telegram (@username):</label>
+          <input type="text" id="mod-tg" name="telegram" class="form-field-input" placeholder="@username" required>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="mod-niche">Направление проекта:</label>
-          <input type="text" id="mod-niche" name="niche" class="form-input" placeholder="B2B Лидогенерация / Сервис / CPA" required>
+        <div class="form-field-unit">
+          <label class="form-field-label" for="mod-task">Что необходимо:</label>
+          <input type="text" id="mod-task" name="task" class="form-field-input" placeholder="FB Баинг / Воронка в CRM / Лендинг / Отбив без CRM" required>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">
-          <span>Отправить заявку в Clover Team</span>
+        <button type="submit" class="btn-studio btn-studio-primary" style="width:100%; margin-top:8px;">
+          <span>Отправить заявку</span>
+          <span style="font-family:var(--font-mono);">→</span>
         </button>
       </form>
 
-      <div class="form-success-message">
-        <div style="font-size:2rem; margin-bottom:8px;">🚀</div>
-        <h4 style="font-size:1.25rem; margin-bottom:8px; color:#ffffff;">Спасибо за заявку!</h4>
-        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">
-          Мы уже готовы ответить. Нажмите кнопку ниже, чтобы открыть прямой диалог:
+      <div class="form-alert-success">
+        <h4 style="font-size:1.15rem; margin-bottom:8px;">Заявка отправлена</h4>
+        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">
+          Перейдите в Telegram для моментального контакта:
         </p>
-        <a href="#" class="btn btn-telegram-channel tg-direct-send-btn" target="_blank" rel="noopener noreferrer" style="width:100%;">
-          Перейти в Telegram
+        <a href="#" class="btn-studio btn-studio-primary btn-studio-sm direct-tg-link" target="_blank" rel="noopener noreferrer">
+          Открыть Telegram
         </a>
       </div>
     </div>
@@ -1151,66 +788,56 @@
   <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
-  <footer class="site-footer">
+  <footer class="studio-footer">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#hero" class="brand-logo">
-            <img src="assets/images/logo.jpg" alt="Clover Team" width="38" height="38">
-            <div class="brand-name">
-              <span class="brand-name-title">CLOVER</span>
-              <span class="brand-name-tag">T E A M</span>
-            </div>
-          </a>
-          <p>
-            Профессиональный арбитраж трафика, B2B лидогенерация, сведение юнит-экономики и AI-автоматизация продаж. Опыт более 3 лет.
+      <div class="footer-main-grid">
+        <div>
+          <div class="studio-logo" style="margin-bottom:16px;">
+            <img src="assets/images/logo.jpg" alt="Clover Team" width="28" height="28">
+            <span class="logo-brand-name">CLOVER TEAM</span>
+          </div>
+          <p style="color:var(--text-secondary); font-size:0.9rem; max-width:320px; line-height:1.6;">
+            FB баинг на любые вертикали, оперативное решение трудностей, грамотные воронки в CRM, разработка сайтов, ботов и автоматизация под ключ.
           </p>
         </div>
 
-        <div class="footer-col">
-          <h4>Навигация</h4>
-          <ul class="footer-links">
-            <li><a href="#about" class="footer-link">О команде</a></li>
-            <li><a href="#expertise" class="footer-link">Компетенции</a></li>
-            <li><a href="#cases" class="footer-link">Наши кейсы</a></li>
-            <li><a href="#calculator" class="footer-link">Юнит-экономика</a></li>
+        <div>
+          <h4 class="footer-col-title">Навигация</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services" class="footer-nav-link">Компетенции</a></li>
+            <li><a href="#approach" class="footer-nav-link">Подход под ключ</a></li>
+            <li><a href="#cases" class="footer-nav-link">Кейсы</a></li>
+            <li><a href="#contact" class="footer-nav-link">Контакты</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Экспертиза</h4>
-          <ul class="footer-links">
-            <li><a href="#expertise" class="footer-link">Meta Buying (FB)</a></li>
-            <li><a href="#expertise" class="footer-link">AI Воронки в CRM</a></li>
-            <li><a href="#expertise" class="footer-link">HADI-циклы</a></li>
-            <li><a href="#expertise" class="footer-link">Лендинги и прокладки</a></li>
+        <div>
+          <h4 class="footer-col-title">Направления</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services" class="footer-nav-link">FB Баинг</a></li>
+            <li><a href="#services" class="footer-nav-link">Воронки в CRM</a></li>
+            <li><a href="#services" class="footer-nav-link">Лендинги & E-comm</a></li>
+            <li><a href="#services" class="footer-nav-link">Отбив без CRM</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Экосистема</h4>
-          <ul class="footer-links">
-            <li><a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram Канал</a></li>
-            <li><a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram Бот</a></li>
-            <li><a href="https://t.me/clover_team_lead" target="_blank" rel="noopener noreferrer" class="footer-link">Прямой контакт тимлида</a></li>
-            <li><a href="#contact" class="footer-link">Оставить заявку</a></li>
+        <div>
+          <h4 class="footer-col-title">Экосистема</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://t.me/clover_team_channel" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Telegram Канал</a></li>
+            <li><a href="https://t.me/clover_traffic_bot" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Telegram Бот</a></li>
+            <li><a href="https://t.me/clover_team_lead" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Связь с тимлидом</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>
-          © 2026 Clover Team. Все права защищены. B2B Performance & Traffic Arbitrage.
-        </div>
-        <div class="footer-status-indicator">
-          <span class="pulse-dot"></span>
-          <span>Все системы и байинг активны 24/7</span>
-        </div>
+      <div class="footer-bottom-bar">
+        <div>© 2026 CLOVER TEAM. ALL RIGHTS RESERVED.</div>
+        <div>PERFORMANCE & INFRASTRUCTURE STUDIO</div>
       </div>
     </div>
   </footer>
 
-  <!-- Main JavaScript File -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
