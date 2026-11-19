@@ -1,21 +1,25 @@
 /**
- * CLOVER TEAM — STUDIO INTERACTIONS & LOGIC
- * Minimalist, high-performance, non-template architecture.
+ * CLOVER TEAM — MAFIA TRAFA STYLE INTERACTIVE SCRIPT
+ * High-conversion calculator, dynamic counters, rotating live widget,
+ * cases slider, FAQ accordion, modals and Telegram deep-linking.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initHeader();
+  initHeaderScroll();
   initMobileNav();
+  initCounters();
   initCasesSlider();
-  initRotatingStudioBanner();
-  initModal();
-  initFormHandlers();
-  initClipboardCopy();
+  initTrafficCalculator();
+  initRotatingLiveWidget();
+  initFaqAccordion();
+  initModals();
+  initForms();
+  initClipboard();
 });
 
 /* 1. Header scroll detection */
-function initHeader() {
-  const header = document.querySelector('.studio-header');
+function initHeaderScroll() {
+  const header = document.querySelector('.site-header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
       header?.classList.add('scrolled');
@@ -27,141 +31,252 @@ function initHeader() {
 
 /* 2. Mobile Navigation */
 function initMobileNav() {
-  const btn = document.querySelector('.mobile-menu-btn');
-  const nav = document.querySelector('.studio-nav');
-  if (!btn || !nav) return;
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  const navList = document.querySelector('.nav-links-list');
+  if (!toggleBtn || !navList) return;
 
-  btn.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    btn.textContent = nav.classList.contains('open') ? '✕' : '☰';
+  toggleBtn.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    toggleBtn.textContent = navList.classList.contains('open') ? '✕' : '☰';
   });
 
-  nav.querySelectorAll('.studio-nav-link').forEach(link => {
+  navList.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      btn.textContent = '☰';
+      navList.classList.remove('open');
+      toggleBtn.textContent = '☰';
     });
   });
 }
 
-/* 3. Editorial Cases Slider */
+/* 3. Number Counter Animation */
+function initCounters() {
+  const counters = document.querySelectorAll('[data-target]');
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateValue(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  counters.forEach(c => observer.observe(c));
+
+  function animateValue(el) {
+    const target = parseFloat(el.getAttribute('data-target') || '0');
+    const prefix = el.getAttribute('data-prefix') || '';
+    const suffix = el.getAttribute('data-suffix') || '';
+    const isDecimal = target % 1 !== 0;
+    const duration = 1600;
+    const start = performance.now();
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const current = target * ease;
+
+      el.textContent = `${prefix}${isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString('ru-RU')}${suffix}`;
+      if (progress < 1) requestAnimationFrame(update);
+      else el.textContent = `${prefix}${isDecimal ? target.toFixed(1) : target.toLocaleString('ru-RU')}${suffix}`;
+    }
+    requestAnimationFrame(update);
+  }
+}
+
+/* 4. Cases Carousel */
 function initCasesSlider() {
-  const track = document.querySelector('.cases-editorial-track');
-  const prevBtn = document.querySelector('.nav-arrow-btn.prev');
-  const nextBtn = document.querySelector('.nav-arrow-btn.next');
+  const track = document.querySelector('.cases-carousel-track');
+  const prevBtn = document.querySelector('.arrow-slider-btn.prev');
+  const nextBtn = document.querySelector('.arrow-slider-btn.next');
   if (!track) return;
 
   const getStep = () => {
-    const card = track.querySelector('.case-editorial-card');
-    return card ? card.offsetWidth + 24 : 420;
+    const card = track.querySelector('.case-card-mafia');
+    return card ? card.offsetWidth + 24 : 450;
   };
 
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: getStep(), behavior: 'smooth' });
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
-    });
-  }
+  if (nextBtn) nextBtn.addEventListener('click', () => track.scrollBy({ left: getStep(), behavior: 'smooth' }));
+  if (prevBtn) prevBtn.addEventListener('click', () => track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
 }
 
-/* 4. Rotating Studio Corner Alert / Hot Case Ticker */
-function initRotatingStudioBanner() {
-  const banner = document.getElementById('rotating-studio-banner');
-  if (!banner) return;
+/* 5. Scale & Traffic Calculator (Mafia Trafa style) */
+function initTrafficCalculator() {
+  const budgetBar = document.getElementById('calc-budget-bar');
+  const budgetOutput = document.getElementById('calc-budget-val');
+  const vertSelect = document.getElementById('calc-vert-select');
+  const checkBar = document.getElementById('calc-check-bar');
+  const checkOutput = document.getElementById('calc-check-val');
 
-  const items = banner.querySelectorAll('.banner-item');
-  const prevBtn = banner.querySelector('.banner-btn-prev');
-  const nextBtn = banner.querySelector('.banner-btn-next');
-  const closeBtn = banner.querySelector('.banner-btn-close');
-  const expandBtn = banner.querySelector('.banner-expand-trigger');
-  const progressFill = banner.querySelector('.banner-progress-fill');
+  const leadsOut = document.getElementById('calc-res-leads');
+  const revOut = document.getElementById('calc-res-rev');
+  const profitOut = document.getElementById('calc-res-profit');
+  const roiOut = document.getElementById('calc-res-roi');
 
-  let activeIndex = 0;
-  const cycleTime = 5500;
+  if (!budgetBar || !checkBar) return;
+
+  function recalculate() {
+    const budget = parseFloat(budgetBar.value);
+    const avgCheck = parseFloat(checkBar.value);
+    const vert = vertSelect ? vertSelect.value : 'b2b';
+
+    budgetOutput.textContent = `$${budget.toLocaleString('ru-RU')}`;
+    checkOutput.textContent = `$${avgCheck.toLocaleString('ru-RU')}`;
+
+    // Niche multiplier for CPL
+    let baseCpl = 16;
+    let crMultiplier = 0.12;
+
+    if (vert === 'ecomm') {
+      baseCpl = 10;
+      crMultiplier = 0.18;
+    } else if (vert === 'crypto') {
+      baseCpl = 28;
+      crMultiplier = 0.08;
+    } else if (vert === 'cpa') {
+      baseCpl = 12;
+      crMultiplier = 0.15;
+    }
+
+    const estimatedLeads = Math.max(10, Math.floor(budget / baseCpl));
+    const deals = Math.max(1, Math.floor(estimatedLeads * crMultiplier));
+    const revenue = Math.floor(deals * avgCheck);
+    const netProfit = revenue - budget;
+    const roi = budget > 0 ? Math.round((netProfit / budget) * 100) : 0;
+
+    leadsOut.textContent = `${estimatedLeads.toLocaleString('ru-RU')} заявок`;
+    revOut.textContent = `$${revenue.toLocaleString('ru-RU')}`;
+    profitOut.textContent = netProfit >= 0 ? `+$${netProfit.toLocaleString('ru-RU')}` : `-$${Math.abs(netProfit).toLocaleString('ru-RU')}`;
+    roiOut.textContent = `${roi > 0 ? '+' : ''}${roi}%`;
+
+    profitOut.style.color = netProfit >= 0 ? 'var(--clover-yellow)' : '#ef4444';
+    roiOut.style.color = roi >= 0 ? 'var(--clover-green)' : '#ef4444';
+  }
+
+  budgetBar.addEventListener('input', recalculate);
+  checkBar.addEventListener('input', recalculate);
+  vertSelect?.addEventListener('change', recalculate);
+
+  recalculate();
+}
+
+/* 6. Rotating Live Widget (Hot Cases & Live Alerts) */
+function initRotatingLiveWidget() {
+  const widget = document.getElementById('rotating-live-widget');
+  if (!widget) return;
+
+  const slides = widget.querySelectorAll('.widget-slide');
+  const nextBtn = widget.querySelector('.w-btn-next');
+  const prevBtn = widget.querySelector('.w-btn-prev');
+  const closeBtn = widget.querySelector('.w-btn-close');
+  const restoreBtn = widget.querySelector('.widget-restore-btn');
+  const progressBar = widget.querySelector('.widget-progress-bar');
+
+  let curIdx = 0;
+  const slideDuration = 5500;
   let timer = null;
-  let progressInterval = null;
+  let progressInt = null;
   let startTime = null;
 
-  function setSlide(idx) {
-    items.forEach((item, i) => {
-      item.classList.toggle('active', i === idx);
-    });
+  function show(idx) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
     runProgress();
   }
 
-  function advance() {
-    activeIndex = (activeIndex + 1) % items.length;
-    setSlide(activeIndex);
+  function next() {
+    curIdx = (curIdx + 1) % slides.length;
+    show(curIdx);
   }
 
-  function regress() {
-    activeIndex = (activeIndex - 1 + items.length) % items.length;
-    setSlide(activeIndex);
+  function prev() {
+    curIdx = (curIdx - 1 + slides.length) % slides.length;
+    show(curIdx);
   }
 
   function runProgress() {
-    clearInterval(progressInterval);
+    clearInterval(progressInt);
     clearTimeout(timer);
-    if (progressFill) progressFill.style.width = '0%';
+    if (progressBar) progressBar.style.width = '0%';
 
     startTime = Date.now();
-    progressInterval = setInterval(() => {
+    progressInt = setInterval(() => {
       const elapsed = Date.now() - startTime;
-      const pct = Math.min((elapsed / cycleTime) * 100, 100);
-      if (progressFill) progressFill.style.width = `${pct}%`;
+      const pct = Math.min((elapsed / slideDuration) * 100, 100);
+      if (progressBar) progressBar.style.width = `${pct}%`;
 
-      if (elapsed >= cycleTime) {
-        clearInterval(progressInterval);
-        advance();
+      if (elapsed >= slideDuration) {
+        clearInterval(progressInt);
+        next();
       }
     }, 50);
   }
 
-  if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); advance(); });
-  if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); regress(); });
+  if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+  if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
 
-  banner.addEventListener('mouseenter', () => clearInterval(progressInterval));
-  banner.addEventListener('mouseleave', () => {
-    if (!banner.classList.contains('minimized')) runProgress();
+  widget.addEventListener('mouseenter', () => clearInterval(progressInt));
+  widget.addEventListener('mouseleave', () => {
+    if (!widget.classList.contains('minimized')) runProgress();
   });
 
   if (closeBtn) {
     closeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      banner.classList.add('minimized');
-      clearInterval(progressInterval);
+      widget.classList.add('minimized');
+      clearInterval(progressInt);
     });
   }
 
-  if (expandBtn) {
-    expandBtn.addEventListener('click', () => {
-      banner.classList.remove('minimized');
+  if (restoreBtn) {
+    restoreBtn.addEventListener('click', () => {
+      widget.classList.remove('minimized');
       runProgress();
     });
   }
 
-  // Links click smooth scroll
-  banner.querySelectorAll('.banner-item-link').forEach(link => {
-    link.addEventListener('click', (e) => {
+  widget.querySelectorAll('.widget-link-act').forEach(l => {
+    l.addEventListener('click', (e) => {
       e.preventDefault();
-      const casesSec = document.getElementById('cases');
-      casesSec?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-  setSlide(0);
+  show(0);
 }
 
-/* 5. Minimalist Modal Dialog */
-function initModal() {
-  const modal = document.getElementById('consult-modal');
-  const triggers = document.querySelectorAll('.trigger-consult-modal');
-  const dismissBtn = document.querySelector('.modal-dismiss-btn');
+/* 7. FAQ Accordion */
+function initFaqAccordion() {
+  const items = document.querySelectorAll('.faq-card-item');
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    const answer = item.querySelector('.faq-answer-body');
+    if (!btn || !answer) return;
+
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      items.forEach(other => {
+        other.classList.remove('active');
+        const ans = other.querySelector('.faq-answer-body');
+        if (ans) ans.style.maxHeight = null;
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+      }
+    });
+  });
+}
+
+/* 8. Modals */
+function initModals() {
+  const modal = document.getElementById('lead-modal');
+  const triggers = document.querySelectorAll('.open-mafia-modal');
+  const closeBtn = document.querySelector('.modal-close-x');
   if (!modal) return;
 
   const open = () => {
@@ -179,62 +294,61 @@ function initModal() {
     open();
   }));
 
-  if (dismissBtn) dismissBtn.addEventListener('click', close);
-
+  if (closeBtn) closeBtn.addEventListener('click', close);
   modal.addEventListener('click', (e) => {
     if (e.target === modal) close();
   });
-
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) close();
   });
 }
 
-/* 6. Form Handlers & Telegram Direct Link */
-function initFormHandlers() {
-  const forms = document.querySelectorAll('form[data-form="brief"]');
+/* 9. Forms & Telegram Deep Linking */
+function initForms() {
+  const forms = document.querySelectorAll('form[data-action="lead"]');
 
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = form.querySelector('[name="name"]')?.value || 'Не указано';
       const tg = form.querySelector('[name="telegram"]')?.value || 'Не указан';
-      const task = form.querySelector('[name="task"]')?.value || 'Полный комплекс услуг';
+      const vert = form.querySelector('[name="vertical"]')?.value || 'Любая вертикаль';
       const budget = form.querySelector('[name="budget"]')?.value || 'Не указан';
 
-      const text = encodeURIComponent(
-        `Привет, Clover Team! Хотим обсудить проект.\n\n` +
-        `• Имя / Контакт: ${name}\n` +
-        `• Telegram: ${tg}\n` +
-        `• Задача: ${task}\n` +
-        `• Бюджет / Масштаб: ${budget}`
+      const msg = encodeURIComponent(
+        `🍀 Привет, Clover Team! Хотим запустить связку.\n\n` +
+        `👤 Имя: ${name}\n` +
+        `✈️ Telegram: ${tg}\n` +
+        `🎯 Направление: ${vert}\n` +
+        `💰 Бюджет: ${budget}\n\n` +
+        `Жду обратной связи и медиаплана!`
       );
 
-      const alertBox = form.parentElement.querySelector('.form-alert-success');
+      const alertBox = form.parentElement.querySelector('.form-done-alert');
       if (alertBox) {
         form.style.display = 'none';
         alertBox.style.display = 'block';
 
-        const directLink = alertBox.querySelector('.direct-tg-link');
-        if (directLink) {
-          directLink.href = `https://t.me/clover_team_lead?text=${text}`;
+        const btn = alertBox.querySelector('.tg-launch-link');
+        if (btn) {
+          btn.href = `https://t.me/clover_team_lead?text=${msg}`;
         }
       }
     });
   });
 }
 
-/* 7. Clipboard Copy */
-function initClipboardCopy() {
+/* 10. Clipboard Copy */
+function initClipboard() {
   document.querySelectorAll('[data-copy]').forEach(el => {
     el.addEventListener('click', () => {
-      const val = el.getAttribute('data-copy');
-      navigator.clipboard.writeText(val).then(() => {
-        const original = el.textContent;
+      const text = el.getAttribute('data-copy');
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = el.textContent;
         el.textContent = 'Скопировано ✓';
         setTimeout(() => {
-          el.textContent = original;
-        }, 1800);
+          el.textContent = orig;
+        }, 2000);
       });
     });
   });
